@@ -18,7 +18,7 @@ export function Header() {
                 <NavDropdown.Item as={Link} to="/especialidades">Especialidades</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item as={Link} to="/pacientecadastro">Cadastro de Usuários</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/u/lista">Lista de Usuários</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/ListaUsuarios">Lista de Usuários</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Médicos" id="dropdown02">
@@ -33,7 +33,7 @@ export function Header() {
                 <NavDropdown.Item as={Link} to="/u/editar/senha">Editar Senha</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item as={Link} to="/agendamentos/agendar">Agendar Consulta</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/agendamentos/historico/paciente">Histórico de Consultas</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/">Histórico de Consultas</NavDropdown.Item>
               </NavDropdown>
             </Nav>
 

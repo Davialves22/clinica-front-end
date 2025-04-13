@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header } from '../../components/header/Header';
-import { Footer } from '../../components/Footer/footer';
 import springsecurity from '../../assets/spring-security.png';
 import medicina1 from '../../assets/medicina_1.jpg';
 import medicina2 from '../../assets/medicina_2.jpg';
