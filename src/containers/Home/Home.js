@@ -1,18 +1,17 @@
 import React from 'react';
 import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/Footer/footer';
+import springsecurity from '../../assets/spring-security.png';
+import medicina1 from '../../assets/medicina_1.jpg';
+import medicina2 from '../../assets/medicina_2.jpg';
+import medicina3 from '../../assets/medicina_3.jpg';
+import medicina4 from '../../assets/medicina_4.jpg';
+import medicina5 from '../../assets/medicina_5.jpg';
+import medicina6 from '../../assets/medicina_6.jpg';
+
+
 
 export function Home() {
-    // Aqui você pode armazenar os caminhos das imagens e o texto em variáveis ou estado, caso precise de manipulação dinâmica.
-    const images = {
-        springSecurity: '/image/spring-security.png',
-        medicina1: '/image/medicina_1.jpg',
-        medicina2: '/image/medicina_2.jpg',
-        medicina3: '/image/medicina_3.jpg',
-        medicina4: '/image/medicina_4.jpg',
-        medicina5: '/image/medicina_5.jpg',
-        medicina6: '/image/medicina_6.jpg',
-    };
 
     return (
         <>
@@ -20,14 +19,14 @@ export function Home() {
 
             <section className="layout-content">
                 <main role="main">
-                    {/* Seção Jumbotron */}
+                    
                     <section className="jumbotron text-center">
                         <img
-                            className="d-block mx-auto mb-4"
-                            src={images.springSecurity}
+                            className="d-block mx-auto mb-4 mt-5"
+                            src={springsecurity}
                             alt="Spring Security"
-                            width="72"
-                            height="72"
+                            width="220"
+                            height="220"
                         />
                         <div className="container">
                             <h1 className="jumbotron-heading">Clínica Spring Security</h1>
@@ -45,7 +44,7 @@ export function Home() {
                             <div className="row">
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
-                                        <img className="card-img-top" src={images.medicina1} alt="Medicina Esportiva" />
+                                        <img className="card-img-top" src={medicina1} alt="Medicina Esportiva" />
                                         <div className="card-body">
                                             <h5 className="card-title">Medicina Esportiva</h5>
                                             <p className="card-text">
@@ -58,7 +57,7 @@ export function Home() {
                                 </div>
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
-                                        <img className="card-img-top" src={images.medicina2} alt="Cardiologia" />
+                                        <img className="card-img-top" src={medicina2} alt="Cardiologia" />
                                         <div className="card-body">
                                             <h5 className="card-title">Cardiologia</h5>
                                             <p className="card-text">
@@ -70,7 +69,7 @@ export function Home() {
                                 </div>
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
-                                        <img className="card-img-top" src={images.medicina3} alt="Clínica Médica" />
+                                        <img className="card-img-top" src={medicina3} alt="Clínica Médica" />
                                         <div className="card-body">
                                             <h5 className="card-title">Clínica Médica</h5>
                                             <p className="card-text">
@@ -85,7 +84,7 @@ export function Home() {
                                 {/* Outras seções de cards */}
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
-                                        <img className="card-img-top" src={images.medicina4} alt="Pediatria" />
+                                        <img className="card-img-top" src={medicina4} alt="Pediatria" />
                                         <div className="card-body">
                                             <h5 className="card-title">Pediatria</h5>
                                             <p className="card-text">
@@ -98,7 +97,7 @@ export function Home() {
                                 </div>
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
-                                        <img className="card-img-top" src={images.medicina5} alt="Cirurgia Plástica" />
+                                        <img className="card-img-top" src={medicina5} alt="Cirurgia Plástica" />
                                         <div className="card-body">
                                             <h5 className="card-title">Cirurgia Plástica</h5>
                                             <p className="card-text">
@@ -111,7 +110,7 @@ export function Home() {
                                 </div>
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
-                                        <img className="card-img-top" src={images.medicina6} alt="Ginecologia e Obstetrícia" />
+                                        <img className="card-img-top" src={medicina6} alt="Ginecologia e Obstetrícia" />
                                         <div className="card-body">
                                             <h5 className="card-title">Ginecologia e obstetrícia</h5>
                                             <p className="card-text">
