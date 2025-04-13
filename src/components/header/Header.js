@@ -39,7 +39,7 @@ export function Header() {
 
             <Nav className="align-items-center">
               <Nav.Link as={Link} to="/login">Login</Nav.Link>
-              <Nav.Link as={Link} to="/pacientecadastro">Cadastrar-se</Nav.Link>
+              <Nav.Link as={Link} to="/CadastroUsuario">Cadastrar-se</Nav.Link>
 
               {/* ✅ SEU BOTÃO COM DROPDOWN */}
               <Dropdown as={ButtonGroup} className="mb-2 ms-3">

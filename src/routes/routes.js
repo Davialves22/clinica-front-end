@@ -5,6 +5,7 @@ import { MedicoCadastro } from "../containers/MedicoCadastro/MedicoCadastro";
 import { ConsultasAgendadas } from "../containers/MedicoConsultas/MedicoConsultas";
 import { FormularioPaciente } from "../containers/Paciente/FormularioPaciente";
 import { ErrorPage } from "../containers/Error/ErrorPage";
+import { CadastroUsuario } from "../containers/User/CadastroUsuario";
 
 function RoutesComponent() {
     return (
@@ -14,6 +15,7 @@ function RoutesComponent() {
                 <Route path="/cadastro" element={<MedicoCadastro />} />
                 <Route path="/consultas" element={<ConsultasAgendadas />} />
                 <Route path="/pacientecadastro" element={<FormularioPaciente />} />
+                <Route path="/CadastroUsuario" element={<CadastroUsuario/>} />
                 <Route path="*" element={
                     <ErrorPage
                         status="404"
