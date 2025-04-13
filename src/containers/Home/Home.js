@@ -19,7 +19,7 @@ export function Home() {
 
             <section className="layout-content">
                 <main role="main">
-                    
+
                     <section className="jumbotron text-center">
                         <img
                             className="d-block mx-auto mb-4 mt-5"
@@ -38,7 +38,8 @@ export function Home() {
                         </div>
                     </section>
 
-                    {/* Seção de Cards */}
+                    <p style={{ textAlign: 'center' }}>Nossos Serviços:</p>
+
                     <div className="album py-5 bg-light">
                         <div className="container">
                             <div className="row">
@@ -81,7 +82,7 @@ export function Home() {
                                     </div>
                                 </div>
 
-                                {/* Outras seções de cards */}
+
                                 <div className="col-md-4">
                                     <div className="card mb-4 box-shadow">
                                         <img className="card-img-top" src={medicina4} alt="Pediatria" />
@@ -127,7 +128,7 @@ export function Home() {
                 </main>
             </section>
 
-            <Footer/>
+            <Footer />
         </>
     );
 };
