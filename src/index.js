@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import GlobalStyles from './styles/GlobalStyles';
 import { ToastContainer } from 'react-toastify';
 import RoutesComponent from './routes/routes';
+import { Footer } from './components/Footer/footer';
 
 
 
@@ -15,5 +16,6 @@ root.render(
     <RoutesComponent />
     <ToastContainer autoClose={2000} theme='colored' />
     <GlobalStyles />
+    <Footer/>
   </>,
 );

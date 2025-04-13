@@ -25,7 +25,7 @@ export function Header() {
                 <NavDropdown.Item as={Link} to="/cadastro">Dados Cadastrais</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/u/editar/senha">Editar Senha</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/agendamentos/historico/consultas">Consultas Agendadas</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/consultas">Consultas Agendadas</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Pacientes" id="dropdown03">
