@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlertMessage = ({ sucesso, falha }) => {
+export function AlertMessage ({ sucesso, falha })  {
     return (
         <div id="alerta">
             {sucesso && (
@@ -39,5 +39,3 @@ const AlertMessage = ({ sucesso, falha }) => {
         </div>
     );
 };
-
-export default AlertMessage;

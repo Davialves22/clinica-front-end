@@ -5,7 +5,7 @@ export function Footer () {
         <footer className="layout-footer">
             <div className="container">
                 <span className="footer-copy">
-                    &copy; 2019 MBallem. Todos os direitos reservados.
+                    &copy; 2025 IFPE. Todos os direitos reservados.
                 </span>
             </div>
         </footer>
