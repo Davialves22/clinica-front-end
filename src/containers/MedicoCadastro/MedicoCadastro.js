@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Table, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import logoImage from '../../assets/spring-security.png';
 
 export function MedicoCadastro() {
     const [nome, setNome] = useState('');
@@ -7,11 +9,37 @@ export function MedicoCadastro() {
     const [dtInscricao, setDtInscricao] = useState('');
     const [especialidades, setEspecialidades] = useState([]);
     const [novaEspecialidade, setNovaEspecialidade] = useState('');
+    const [formSalvo, setFormSalvo] = useState(false);
+    const [erros, setErros] = useState({});
+    const navigate = useNavigate();
+
+    const validarCampos = () => {
+        const novosErros = {};
+        if (!nome.trim()) novosErros.nome = 'Nome completo é obrigatório.';
+        if (!crm.trim()) novosErros.crm = 'CRM é obrigatório.';
+        if (!dtInscricao.trim()) novosErros.dtInscricao = 'Data da inscrição é obrigatória.';
+        if (especialidades.length === 0) novosErros.especialidades = 'Adicione pelo menos uma especialidade.';
+        return novosErros;
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aqui você lidaria com o envio do formulário (POST)
-        console.log({ nome, crm, dtInscricao, especialidades });
+        const validacoes = validarCampos();
+
+        if (Object.keys(validacoes).length === 0) {
+            // Sucesso no envio
+            console.log({ nome, crm, dtInscricao, especialidades });
+            setFormSalvo(true);
+            setErros({});
+
+            
+            setTimeout(() => {
+                navigate('/'); 
+            }, 2000);
+        } else {
+            setErros(validacoes);
+            setFormSalvo(false);
+        }
     };
 
     const adicionarEspecialidade = () => {
@@ -28,13 +56,7 @@ export function MedicoCadastro() {
     return (
         <main role="main">
             <section className="jumbotron text-center bg-light">
-                <img
-                    className="d-block mx-auto"
-                    src="/image/spring-security.png"
-                    alt="Logo"
-                    width="72"
-                    height="72"
-                />
+                <img className="d-block mx-auto" src={logoImage} alt="Logo" width="72" height="72" />
                 <Container>
                     <h1 className="jumbotron-heading">Clínica Spring Security</h1>
                     <p className="lead text-muted">Médicos e Especialistas</p>
@@ -45,10 +67,13 @@ export function MedicoCadastro() {
                 <Container>
                     <Row className="justify-content-center">
                         <Col md={8}>
-                            {/* Alert Sucesso pode ser renderizado condicionalmente */}
-                            {/* <Alert variant="success">Dados salvos com sucesso!</Alert> */}
+                            {formSalvo && (
+                                <Alert variant="success" transition="fade" show={formSalvo}>
+                                    Dados salvos com sucesso! Redirecionando...
+                                </Alert>
+                            )}
 
-                            <Form onSubmit={handleSubmit}>
+                            <Form onSubmit={handleSubmit} noValidate>
                                 <Form.Group as={Row}>
                                     <Col md={6}>
                                         <Form.Label>Nome Completo</Form.Label>
@@ -56,12 +81,10 @@ export function MedicoCadastro() {
                                             type="text"
                                             placeholder="João da Silva"
                                             value={nome}
-                                            required
+                                            isInvalid={!!erros.nome}
                                             onChange={(e) => setNome(e.target.value)}
                                         />
-                                        <Form.Control.Feedback type="invalid">
-                                            Nome completo é requerido.
-                                        </Form.Control.Feedback>
+                                        <Form.Control.Feedback type="invalid">{erros.nome}</Form.Control.Feedback>
                                     </Col>
                                 </Form.Group>
 
@@ -72,18 +95,20 @@ export function MedicoCadastro() {
                                             type="text"
                                             placeholder="000000"
                                             value={crm}
-                                            required
+                                            isInvalid={!!erros.crm}
                                             onChange={(e) => setCrm(e.target.value)}
                                         />
+                                        <Form.Control.Feedback type="invalid">{erros.crm}</Form.Control.Feedback>
                                     </Col>
                                     <Col md={6}>
                                         <Form.Label>Data da Inscrição</Form.Label>
                                         <Form.Control
                                             type="date"
                                             value={dtInscricao}
-                                            required
+                                            isInvalid={!!erros.dtInscricao}
                                             onChange={(e) => setDtInscricao(e.target.value)}
                                         />
+                                        <Form.Control.Feedback type="invalid">{erros.dtInscricao}</Form.Control.Feedback>
                                     </Col>
                                 </Form.Group>
 
@@ -96,6 +121,9 @@ export function MedicoCadastro() {
                                         onChange={(e) => setNovaEspecialidade(e.target.value)}
                                         onKeyDown={(e) => e.key === 'Enter' && (e.preventDefault(), adicionarEspecialidade())}
                                     />
+                                    {erros.especialidades && (
+                                        <Form.Text className="text-danger">{erros.especialidades}</Form.Text>
+                                    )}
                                     <Form.Text className="text-muted">
                                         Insira suas especialidades médicas e pressione Enter.
                                     </Form.Text>
@@ -152,4 +180,4 @@ export function MedicoCadastro() {
             </section>
         </main>
     );
-};
+}

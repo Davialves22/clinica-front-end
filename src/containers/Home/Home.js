@@ -22,11 +22,11 @@ export function Home() {
 
                     <section className="jumbotron text-center">
                         <img
-                            className="d-block mx-auto mb-4 mt-5"
+                            className="d-block mx-auto mb-4 mt-5 pt-3"
                             src={springsecurity}
                             alt="Spring Security"
-                            width="220"
-                            height="220"
+                            width="100"
+                            height="100"
                         />
                         <div className="container">
                             <h1 className="jumbotron-heading">Clínica Spring Security</h1>
