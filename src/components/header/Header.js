@@ -17,19 +17,19 @@ export function Header() {
               <NavDropdown title="Administrador" id="dropdown01">
                 <NavDropdown.Item as={Link} to="/especialidades">Especialidades</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/u/novo/cadastro/usuario">Cadastro de Usuários</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/pacientecadastro">Cadastro de Usuários</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/u/lista">Lista de Usuários</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Médicos" id="dropdown02">
-                <NavDropdown.Item as={Link} to="/medicos/dados">Dados Cadastrais</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/cadastro">Dados Cadastrais</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/u/editar/senha">Editar Senha</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item as={Link} to="/agendamentos/historico/consultas">Consultas Agendadas</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Pacientes" id="dropdown03">
-                <NavDropdown.Item as={Link} to="/pacientes">Cadastrar Dados</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/pacientecadastro">Cadastrar Dados</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/u/editar/senha">Editar Senha</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item as={Link} to="/agendamentos/agendar">Agendar Consulta</NavDropdown.Item>
@@ -39,7 +39,7 @@ export function Header() {
 
             <Nav className="align-items-center">
               <Nav.Link as={Link} to="/login">Login</Nav.Link>
-              <Nav.Link as={Link} to="/u/novo/cadastro">Cadastrar-se</Nav.Link>
+              <Nav.Link as={Link} to="/pacientecadastro">Cadastrar-se</Nav.Link>
 
               {/* ✅ SEU BOTÃO COM DROPDOWN */}
               <Dropdown as={ButtonGroup} className="mb-2 ms-3">
