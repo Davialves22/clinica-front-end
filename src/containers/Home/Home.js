@@ -127,8 +127,6 @@ export function Home() {
                     </div>
                 </main>
             </section>
-
-            <Footer />
         </>
     );
 };
