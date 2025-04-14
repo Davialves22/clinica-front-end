@@ -17,7 +17,7 @@ export function Header() {
               <NavDropdown title="Administrador" id="dropdown01">
                 <NavDropdown.Item as={Link} to="/especialidades">Especialidades</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/pacientecadastro">Cadastro de Usuários</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/CadastroUsuario">Cadastro de Usuários</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/ListaUsuarios">Lista de Usuários</NavDropdown.Item>
               </NavDropdown>
 
