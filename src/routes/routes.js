@@ -7,6 +7,7 @@ import { FormularioPaciente } from "../containers/Paciente/FormularioPaciente";
 import { ErrorPage } from "../containers/Error/ErrorPage";
 import { CadastroUsuario } from "../containers/User/CadastroUsuario";
 import { ListaUsuarios } from "../containers/User/ListaUsuarios";
+import { AgendamentoForm } from "../containers/Agendamento/AgendamentoForm";
 
 function RoutesComponent() {
     return (
@@ -18,6 +19,7 @@ function RoutesComponent() {
                 <Route path="/pacientecadastro" element={<FormularioPaciente />} />
                 <Route path="/CadastroUsuario" element={<CadastroUsuario/>} />
                 <Route path="/ListaUsuarios" element={<ListaUsuarios/>} />
+                <Route path="/agendamento" element={<AgendamentoForm/>} />
                 <Route path="*" element={
                     <ErrorPage
                         status="404"
