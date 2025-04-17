@@ -41,7 +41,7 @@ export function Header() {
               <Nav.Link as={Link} to="/login">Login</Nav.Link>
               <Nav.Link as={Link} to="/CadastroUsuario">Cadastrar-se</Nav.Link>
 
-              {/* ✅ SEU BOTÃO COM DROPDOWN */}
+              
               <Dropdown as={ButtonGroup} className="mb-2 ms-3">
                 <Button variant="light">
                   <i className="fas fa-user"></i> <span>Davi</span>
