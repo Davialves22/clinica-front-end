@@ -8,12 +8,14 @@ import { ErrorPage } from "../containers/Error/ErrorPage";
 import { CadastroUsuario } from "../containers/User/CadastroUsuario";
 import { ListaUsuarios } from "../containers/User/ListaUsuarios";
 import { AgendamentoForm } from "../containers/Agendamento/AgendamentoForm";
+import { LoginPage } from "../containers/Login/Login";
 
 function RoutesComponent() {
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/login" element={<LoginPage />} />
                 <Route path="/cadastro" element={<MedicoCadastro />} />
                 <Route path="/consultas" element={<ConsultasAgendadas />} />
                 <Route path="/pacientecadastro" element={<FormularioPaciente />} />

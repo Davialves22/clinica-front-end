@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Alert, Nav } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import springsecurity from '../../assets/spring-security.png';
 
 export function LoginPage() {
     const [email, setEmail] = useState('');
@@ -42,7 +43,7 @@ export function LoginPage() {
             <div className="text-center mb-4">
                 <img
                     className="mb-4"
-                    src="/image/spring-security.png"
+                    src = {springsecurity}
                     alt="logo"
                     width="72"
                     height="72"
@@ -65,7 +66,7 @@ export function LoginPage() {
                 <Form.Group className="mb-3" controlId="inputEmail">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
-                        type="email"
+                        type="text"
                         placeholder="Digite seu e-mail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -102,7 +103,7 @@ export function LoginPage() {
             <hr />
 
             <Nav className="flex-column text-center">
-                <Nav.Link href="/u/novo/cadastro">
+                <Nav.Link href="/cadastro">
                     <i className="far fa-arrow-alt-circle-right"></i> Novo cadastro
                 </Nav.Link>
                 <Nav.Link href="/u/p/redefinir/senha">
@@ -112,10 +113,6 @@ export function LoginPage() {
                     <i className="fas fa-home"></i> Home
                 </Nav.Link>
             </Nav>
-
-            <p className="mt-5 mb-3 text-muted text-center">
-                Clínica Spring Security &copy; 2019
-            </p>
         </Container>
     );
 }
